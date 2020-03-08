@@ -1,6 +1,5 @@
 {
-  "main": "app.vue",
-
+  "main": "main.js",
   "name": "dogoodvue",
   "version": "0.1.0",
   "private": true,
