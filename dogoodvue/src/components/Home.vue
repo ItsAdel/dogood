@@ -60,21 +60,36 @@
     text-align: center;
     font-size: 1.3em;
   }
+
+  b-row {
+    margin-bottom: 10px;
+  }
+
   #do-left-row {
     text-align: left;
     padding: 3%;
+    border: 1px solid salmon;
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
 
   #do-right-row {
     text-align: right;
     padding: 3%;
+    border: 1px solid seagreen;
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
 
   #row-text {
     margin-top: 25px;
   }
 
-  b-row:hover {
+  #do-left-row:hover {
     background-color: salmon;
+  }
+
+  #do-right-row:hover {
+    background-color: seagreen;
   }
 </style>
