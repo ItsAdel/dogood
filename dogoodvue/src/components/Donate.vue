@@ -3,9 +3,10 @@
     <h3>Be compassionate</h3>
     <b-container v-if="searched" id="do-donate-wrapper">
       <b-row v-for="charity in this.charities" :key="charity.nonprofitId" id="do-left-row">
+        <a :href=charity.homePageURL>
         <b-col id="row-text"><h4>{{ charity.name }}</h4>
-          <br><p> {{ charity.mission }} </p>
-        </b-col>
+        <br><p> {{ charity.mission }} </p>
+        </b-col></a>
 
       </b-row>
     </b-container>
@@ -120,5 +121,10 @@
 
   #search-container {
     margin-top: 20%;
+  }
+
+  a, a:visited, a:hover, a:active {
+    color: black;
+    text-decoration: none;
   }
 </style>
