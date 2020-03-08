@@ -1,0 +1,6 @@
+runtime: nodejs10
+
+handlers:
+  - url: /(.*\..+)$
+    static_files: dist/\1
+    upload: dist/(.*\..+)$
