@@ -6,8 +6,16 @@ import App from './App.vue'
 import { routes } from './routes'
 import axios from 'axios'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faHome, faCalendar, faPortrait } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+library.add(faHome, faCalendar, faPortrait)
+ 
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 axios.defaults.baseURL = 'https://dogood-64567.firebaseio.com/'
 
