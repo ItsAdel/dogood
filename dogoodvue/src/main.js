@@ -19,6 +19,14 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 axios.defaults.baseURL = 'https://dogood-64567.firebaseio.com/'
 
+import Calendar from 'v-calendar/lib/components/calendar.umd'
+import DatePicker from 'v-calendar/lib/components/date-picker.umd'
+
+// Register components in your 'main.js'
+Vue.component('calendar', Calendar)
+Vue.component('date-picker', DatePicker)
+
+
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
 Vue.use(VueResource)

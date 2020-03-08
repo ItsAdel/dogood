@@ -26,5 +26,6 @@
     bottom: 6%;
     width: 100%;
     text-align: center;
+    background: rgba(255, 255, 255, 0.473);
   }
 </style>
