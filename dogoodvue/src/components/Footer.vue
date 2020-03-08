@@ -3,7 +3,7 @@
     <b-container class="do-footer">
       <b-row>
         <b-nav>
-        <b-col><b-nav-item to='/'>Home</b-nav-item></b-col>
+        <b-col><b-nav-item to='/home'>Home</b-nav-item></b-col>
         <b-col><b-nav-item to='/cats'>Calendar</b-nav-item></b-col>
         <b-col><b-nav-item>Profile</b-nav-item></b-col>
         </b-nav>
@@ -15,7 +15,7 @@
 <script>
 
 	export default {
-		
+
 	}
 </script>
 

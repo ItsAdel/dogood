@@ -9,13 +9,15 @@
 
 
     <b-dropdown id="volunteer-choice" text="Pick an event to volunteer for.">
-      <template v-slot:button-content>
-        Pick an event to <strong> volunteer </strong> for.
-      </template>
-      <b-dropdown-item href="#" v-for="item in eventList" :key="item.location">
+
+      <b-dropdown-item href="#" v-for="item in eventList" :key="item.location"
+       @click="details(item)">
         {{ item.description }}
        </b-dropdown-item>
+
     </b-dropdown>
+
+    <div v-if="itemChosen"> {{ dataPoint.link }} </div>
 
   </div>
 </template>
@@ -33,12 +35,19 @@
     data() {
       return {
         starDefaultOptions: {animationData: starAnimationData.default},
+        itemChosen: false,
+        dataPoint: null,
       }
     },
 		methods: {
       handleAnimation: function (anim) {
         anim.setSpeed(0.8);
       },
+
+      details: function(item){
+        this.dataPoint = item;
+        this.itemChosen = !this.itemChosen;
+      }
 
     },
     computed: {
