@@ -18,19 +18,18 @@
     data() {
       return {
         defaultOptions: {animationData: animationData.default},
-        animationSpeed: 0.5
       }
     },
     mounted () {
-      document.querySelector('.footer').style.display = 'none'
+      document.querySelector('.do-footer').style.display = 'none'
     },
     beforeDestroy() {
-      document.querySelector('.footer').style.display = 'inherit'
+      document.querySelector('.do-footer').style.display = 'block'
   },
     methods: {
       handleAnimation: function (anim) {
         this.anim = anim;
-        this.anim.setSpeed(this.animationSpeed);
+        this.anim.setSpeed(0.3);
       },
     }
   }
