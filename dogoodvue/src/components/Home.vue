@@ -6,10 +6,12 @@
         <b-col id="row-text" cols="8">Make a donation</b-col>
         <b-col><lottie :options="coinDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
       </b-row>
-      <b-row id="do-right-row">
-        <b-col><lottie :options="irrigatioDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
-        <b-col id="row-text" cols="8">Acts of kindness</b-col>
-      </b-row>
+      <router-link to="/actsofkindness" replace>
+        <b-row id="do-right-row">
+          <b-col><lottie :options="irrigatioDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
+          <b-col id="row-text" cols="8">Acts of kindness</b-col>
+        </b-row>
+      </router-link>
       <b-row id="do-left-row">
         <b-col id="row-text" cols="8">Fight for your cause</b-col>
         <b-col><lottie :options="fireDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
@@ -82,7 +84,7 @@
   }
 
   #row-text {
-    margin-top: 25px;
+    margin-top: 20px;
   }
 
   #do-left-row:hover {
