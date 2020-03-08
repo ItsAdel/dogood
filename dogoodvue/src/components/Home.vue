@@ -20,10 +20,12 @@
         <b-col><lottie :options="fireDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
       </b-row>
       </router-link>
+			<router-link to="/volunteer">
       <b-row id="do-right-row">
         <b-col><lottie :options="cleanDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
         <b-col id="row-text" cols="8">Help local non profits</b-col>
       </b-row>
+		</router-link>
     </b-container>
   </div>
 </template>

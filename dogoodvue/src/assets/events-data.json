@@ -1,0 +1,21 @@
+{
+  "events": [
+    {
+      "location": "Burnaby Neighbourhood House",
+      "description": "Community Games day in Maywood Community Centre",
+      "link": "http://www.burnabynh.ca/get-involved-m"
+    },
+
+    {
+      "location": "Planned Parenthood",
+      "description": "Distribute free contraception at Yorktown High",
+      "link": "https://www.plannedparenthood.org/get-involved/jobs-and-volunteering"
+    },
+
+    {
+      "location": "East Los Angeles Memorial Animal Hospital",
+      "description": "Feed the dogs in pre-operattive surgical wait!",
+      "link": "http://www.casillasveterinaryhospitals.com/locations/east-l.a-commerce.html"
+    }
+  ]
+}
