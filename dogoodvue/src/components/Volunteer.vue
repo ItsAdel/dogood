@@ -1,7 +1,7 @@
 <template>
 	<div id="do-volunteer-wrapper">
 
-    <h6>So, where would you give your time?</h6>
+    <h4>So, where would you give your time?</h4>
 
     <b-container>
       <lottie :options="starDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/>
@@ -10,14 +10,19 @@
 
     <b-dropdown id="volunteer-choice" text="Pick an event to volunteer for.">
 
-      <b-dropdown-item href="#" v-for="item in eventList" :key="item.location"
+      <b-dropdown-item variant="info" href="#" v-for="item in eventList" :key="item.location"
        @click="details(item)">
-        {{ item.description }}
+        {{ item.location }}
        </b-dropdown-item>
 
     </b-dropdown>
 
-    <div v-if="itemChosen"> {{ dataPoint.link }} </div>
+    <div v-if="itemChosen" id="volunteer-card">
+      <b-card :title=dataPoint.location>
+        <b-card-text>{{ dataPoint.description }}</b-card-text>
+        <b-button href="/calendar" variant="success" replace>Volunteer</b-button>
+      </b-card>
+    </div>
 
   </div>
 </template>
@@ -46,14 +51,14 @@
 
       details: function(item){
         this.dataPoint = item;
-        this.itemChosen = !this.itemChosen;
+        this.itemChosen = true;
       }
 
     },
     computed: {
       eventList() {
         return eventData.events.map((item) => {
-          console.log(item.description);
+          console.log(item.location);
           return item;
 
         })
@@ -65,12 +70,16 @@
 
 <style scoped>
 
-  #do-home-wrapper {
-    margin: 10% 0;
+  #do-volunteer-wrapper {
+    margin: 10% 10%;
   }
 
   #volunteer-choice {
-    padding-left: 15%;
+    padding-left: 7%;
+  }
+
+  #volunteer-card{
+    margin-top: 15%;
   }
 
 </style>
