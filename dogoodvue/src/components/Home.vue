@@ -2,20 +2,24 @@
 	<div id="do-home-wrapper">
     <h6>So, what impact will you make today?</h6>
     <b-container id="do-choices-wrapper">
-      <b-row id="do-left-row">
-        <b-col id="row-text" cols="8">Make a donation</b-col>
-        <b-col><lottie :options="coinDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
-      </b-row>
+      <router-link to="/donate" replace>
+        <b-row id="do-left-row">
+          <b-col id="row-text" cols="8">Make a donation</b-col>
+          <b-col><lottie :options="coinDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
+        </b-row>
+      </router-link>
       <router-link to="/actsofkindness" replace>
         <b-row id="do-right-row">
           <b-col><lottie :options="irrigatioDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
           <b-col id="row-text" cols="8">Acts of kindness</b-col>
         </b-row>
       </router-link>
+      <router-link to="/fightforcause" replace>
       <b-row id="do-left-row">
         <b-col id="row-text" cols="8">Fight for your cause</b-col>
         <b-col><lottie :options="fireDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
       </b-row>
+      </router-link>
       <b-row id="do-right-row">
         <b-col><lottie :options="cleanDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
         <b-col id="row-text" cols="8">Help local non profits</b-col>
@@ -51,6 +55,7 @@
 </script>
 
 <style scoped>
+
   #do-home-wrapper {
     margin: 10% 0;
   }
@@ -85,6 +90,12 @@
 
   #row-text {
     margin-top: 20px;
+    text-decoration: none;
+  }
+
+  a, a:visited, a:hover, a:active {
+    color: black;
+    text-decoration: none;
   }
 
   #do-left-row:hover {
