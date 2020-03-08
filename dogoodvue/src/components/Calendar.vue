@@ -1,6 +1,7 @@
 <template>
   <div id="do-calendar-wrapper">
     <h3>Your Schedule</h3>
+    <h6>Give back with a smile</h6>
     <calendar
         :attributes="attrs"
         is-expanded

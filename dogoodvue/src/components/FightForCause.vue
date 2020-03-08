@@ -2,18 +2,16 @@
 	<div id="do-home-wrapper">
     <h6>Get your voice heard</h6>
     <b-container id="do-choices-wrapper">
-      <router-link to="/donate" replace>
+      <router-link to="/contactrep" replace>
         <b-row id="do-left-row">
           <b-col id="row-text" cols="8">Contact a local representative</b-col>
           <b-col><lottie :options="tailDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
         </b-row>
       </router-link>
-      <router-link to="/actsofkindness" replace>
         <b-row id="do-right-row">
           <b-col><lottie :options="contactDefaultOptions" :height="70" :width="70" v-on:animCreated="handleAnimation"/></b-col>
-          <b-col id="row-text" cols="8">Raise awareness</b-col>
+          <b-col id="row-text" cols="8">Raise awareness<br>(Coming soon)</b-col>
         </b-row>
-      </router-link>
     </b-container>
   </div>
 </template>
