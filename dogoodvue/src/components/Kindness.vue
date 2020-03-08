@@ -30,19 +30,19 @@
     computed: {
       task: () => {
         const taskList = [
-          "Clean the dishes",
-          "Help classmate with their homework",
-          "Buy a friend coffee",
-          "Smile when interacting with a stranger",
-          "Offer to help someone with a task",
-          "Pick up litter when you see it outdoors",
-          "Offer to walk someone's dog",
-          "Call a friend you haven't seen in a while",
-          "Call your grandparents",
-          "Buy a coworker lunch",
-          "Express your gratitude for someone"
-        ]
-        const choice = Math.floor(Math.random() * 10)
+          "Clean the dishes. Do a chore that improves the quality of your own life,",
+          "Help peer with their homework. Provide personal assistance to a person who matters to you",
+          "Buy a friend coffee. Make their day!",
+          "Smile when interacting with a stranger. ",
+          "Offer to help someone with a task. This doesn't have to be someone you're close to.",
+          "Clean up a local park, or a place in your community you know to be dirty.",
+          "Offer to walk someone's dog.",
+          "Call a friend you haven't seen in a while. Catch up on eveything you've missed",
+          "Call your grandparents, siblings, or any family you haven't talked to in a while.",
+          "Buy a coworker lunch. Make their day!",
+          "Express your gratitude for someone. It can really make a difference!"
+        ];
+        const choice = Math.floor(Math.random() * 10);
         return taskList[choice]
       }
     } 
